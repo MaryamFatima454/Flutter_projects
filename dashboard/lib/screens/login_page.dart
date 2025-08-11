@@ -10,13 +10,24 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 220, 244, 231),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 80),
-            const Icon(Icons.shopping_bag, size: 80),
+
+            // Circular Image
+            ClipOval(
+              child: Image.asset(
+                'lib/assets/images/shopping_bag.jpg',
+                width: 200,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
+            ),
+
             const SizedBox(height: 20),
             const CustomTextField(label: 'Email'),
             const SizedBox(height: 10),
