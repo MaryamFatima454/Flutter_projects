@@ -55,6 +55,9 @@ flutter:
     - lib/assets/images/watches.jpg
     - lib/assets/images/Smart_band.jpg
     - lib/assets/images/head_set.jpg
+    - lib/assets/images/shopping_bag.jpg
+    - lib/assets/images/login_banner.jpg
+    - lib/assets/images/user_icon.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
