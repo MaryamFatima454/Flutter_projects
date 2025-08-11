@@ -6,7 +6,7 @@ class ForgotPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F7F7),
+      backgroundColor: const Color.fromARGB(255, 247, 233, 251),
       appBar: AppBar(
         title: const Text("Forgot Password"),
         backgroundColor: Colors.deepPurple,
@@ -50,7 +50,7 @@ class ForgotPasswordPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        backgroundColor: Colors.deepPurple,
+                        backgroundColor: const Color.fromARGB(255, 171, 128, 245),
                       ),
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
