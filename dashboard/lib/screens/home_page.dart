@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Let me know if apko koi aur font, hover effect, ya bottom nav bar waghera add karni ho.
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -12,13 +10,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  // You can later replace these with actual page widgets
   final List<Widget> _pages = [
     const HomeContent(),
-    Center(child: Text("Categories Page")),
-    Center(child: Text("Cart Page")),
-    Center(child: Text("Offers Page")),
-    Center(child: Text("Profile Page")),
+    const Center(child: Text("Categories Page")),
+    const Center(child: Text("Cart Page")),
+    const Center(child: Text("Offers Page")),
+    const Center(child: Text("Profile Page")),
   ];
 
   void _onItemTapped(int index) {
@@ -30,6 +27,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:
+          const Color(0xFFBEE9EA), // ✅ Full-page background color added here
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -56,48 +55,45 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xFFBEE9EA), // light teal background
-      child: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  CategoryIcon(label: 'GENERAL', icon: Icons.category),
-                  CategoryIcon(label: 'GROCERY', icon: Icons.shopping_cart),
-                  CategoryIcon(label: 'ELECTRONICS', icon: Icons.devices),
-                  CategoryIcon(label: 'COSMETICS', icon: Icons.brush),
-                ],
-              ),
-              const SizedBox(height: 20),
-              Image.asset('lib/assets/images/watches.jpg', height: 180),
-              const SizedBox(height: 10),
-              const Text(
-                'POPULAR ITEMS',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProductCard(imagePath: 'lib/assets/images/Smart_band.jpg', name: 'Smart Band'),
-                  ProductCard(imagePath: 'lib/assets/images/head_set.jpg', name: 'HeadSet'),
-                ],
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  CategoryButton(label: 'HOT SALES', color: Colors.cyan),
-                  CategoryButton(label: 'NEW ARRIVALS', color: Colors.pinkAccent),
-                ],
-              ),
-              const SizedBox(height: 20),
-            ],
-          ),
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                CategoryIcon(label: 'GENERAL', icon: Icons.category),
+                CategoryIcon(label: 'GROCERY', icon: Icons.shopping_cart),
+                CategoryIcon(label: 'ELECTRONICS', icon: Icons.devices),
+                CategoryIcon(label: 'COSMETICS', icon: Icons.brush),
+              ],
+            ),
+            const SizedBox(height: 20),
+            Image.asset('lib/assets/images/watches.jpg', height: 180),
+            const SizedBox(height: 10),
+            const Text(
+              'POPULAR ITEMS',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                ProductCard(imagePath: 'lib/assets/images/Smart_band.jpg', name: 'Smart Band'),
+                ProductCard(imagePath: 'lib/assets/images/head_set.jpg', name: 'HeadSet'),
+              ],
+            ),
+            const SizedBox(height: 40), // ⬆ Increased space before buttons
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                CategoryButton(label: 'HOT SALES', color: Colors.cyan),
+                CategoryButton(label: 'NEW ARRIVALS', color: Colors.pinkAccent),
+              ],
+            ),
+            const SizedBox(height: 40), // ⬆ Added more space before bottom nav
+          ],
         ),
       ),
     );
@@ -131,7 +127,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(imagePath, height: 100, width: 100),
+        Image.asset(imagePath, height: 170, width: 170),
         Text(name, style: const TextStyle(fontSize: 12)),
       ],
     );
