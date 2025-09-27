@@ -12,7 +12,6 @@ class ThemeNotifier extends ChangeNotifier {
   }
 }
 
-// 🎨 Light Theme
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: Colors.white,
@@ -23,7 +22,6 @@ final ThemeData lightTheme = ThemeData(
   ),
 );
 
-// 🌙 Dark Theme
 final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: Colors.black,
