@@ -9,7 +9,7 @@ import 'profile_page.dart';
 import 'add_post_page.dart';
 import 'search_page.dart';
 import 'login_page.dart';
-import 'post_detail_page.dart'; // 👈 detail page import
+import 'post_detail_page.dart'; 
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -140,9 +140,9 @@ class _HomePageState extends State<HomePage> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFFB3E5FC), // Light sky blue
-              Color(0xFFE1BEE7), // Soft purple
-              Color(0xFFF8BBD0), // Light pink
+              Color(0xFFB3E5FC),
+              Color(0xFFE1BEE7), 
+              Color(0xFFF8BBD0), 
             ],
           ),
         ),
@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
 
                       if (deleted == true) {
                         setState(() {
-                          posts.removeAt(index); // ✅ delete from list
+                          posts.removeAt(index); 
                         });
                       }
                     },
