@@ -60,7 +60,7 @@ class _SearchPageState extends State<SearchPage> {
       body: SafeArea(
         child: Column(
           children: [
-            // 🔹 App Bar with Back + Search
+            
             Padding(
               padding: const EdgeInsets.all(12),
               child: Row(
@@ -96,7 +96,6 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ),
 
-            // 🔹 Category Chips
             SizedBox(
               height: 40,
               child: ListView.builder(
@@ -128,7 +127,6 @@ class _SearchPageState extends State<SearchPage> {
 
             const SizedBox(height: 8),
 
-            // 🔹 Post List (without image)
             Expanded(
               child: _filteredPosts.isEmpty
                   ? Center(
@@ -165,7 +163,7 @@ class _SearchPageState extends State<SearchPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // 🔹 Title
+                        
                             Text(
                               post.title,
                               style: TextStyle(
@@ -176,7 +174,6 @@ class _SearchPageState extends State<SearchPage> {
                             ),
                             const SizedBox(height: 4),
 
-                            // 🔹 Source + Time
                             Row(
                               children: [
                                 Text(
@@ -199,7 +196,6 @@ class _SearchPageState extends State<SearchPage> {
 
                             const SizedBox(height: 8),
 
-                            // 🔹 Category + Views
                             Row(
                               children: [
                                 Container(
@@ -248,7 +244,6 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 
-  // 🔹 Category colors
   Color _getCategoryColor(String category) {
     switch (category.toLowerCase()) {
       case 'technology':
