@@ -7,7 +7,7 @@ class PostProvider extends ChangeNotifier {
   List<Post> get posts => _posts;
 
   void addPost(Post post) {
-    _posts.insert(0, post); // 👈 latest post sabse upar
+    _posts.insert(0, post); 
     notifyListeners();
   }
 }
