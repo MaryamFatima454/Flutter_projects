@@ -8,7 +8,7 @@ class QuotesPage extends StatefulWidget {
 }
 
 class _QuotesPageState extends State<QuotesPage> {
-  // 🔹 Default quotes list
+ 
   List<Map<String, dynamic>> quotes = [
     {
       "quote":
@@ -40,10 +40,8 @@ class _QuotesPageState extends State<QuotesPage> {
     },
   ];
 
-  // 🔹 Favourite quotes list
   List<Map<String, dynamic>> favouriteQuotes = [];
 
-  // 🔹 Function to add a new quote
   void _addQuote(String quote, String author) {
     setState(() {
       quotes.add({
@@ -54,7 +52,6 @@ class _QuotesPageState extends State<QuotesPage> {
     });
   }
 
-  // 🔹 Toggle favourite
   void _toggleFavourite(Map<String, dynamic> quote) {
     setState(() {
       if (favouriteQuotes.contains(quote)) {
@@ -68,7 +65,7 @@ class _QuotesPageState extends State<QuotesPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark; // 👈 Dark/Light check
+    final isDark = theme.brightness == Brightness.dark; 
 
     return Scaffold(
       appBar: AppBar(
@@ -77,7 +74,7 @@ class _QuotesPageState extends State<QuotesPage> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
-          // 🔹 Favourite page button
+         
           IconButton(
             icon: const Icon(Icons.favorite, color: Colors.red),
             onPressed: () {
@@ -90,7 +87,7 @@ class _QuotesPageState extends State<QuotesPage> {
               );
             },
           ),
-          // 🔹 Add quote button
+        
           IconButton(
             icon: const Icon(Icons.add),
             onPressed: () async {
@@ -112,16 +109,16 @@ class _QuotesPageState extends State<QuotesPage> {
         decoration: BoxDecoration(
           color: isDark
               ? Colors.black
-              : null, // 👈 dark mode = black background
+              : null, 
           gradient: isDark
               ? null
-              : const LinearGradient( // 👈 light mode = attractive gradient
+              : const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFFa18cd1), // soft purple
-              Color(0xFFfbc2eb), // pinkish
-              Color(0xFFfad0c4), // peach
+              Color(0xFFa18cd1), 
+              Color(0xFFfbc2eb), 
+              Color(0xFFfad0c4), 
             ],
           ),
         ),
@@ -146,7 +143,6 @@ class _QuotesPageState extends State<QuotesPage> {
   }
 }
 
-// 🔹 Quote Card Widget
 class QuoteCard extends StatelessWidget {
   final String quote;
   final String author;
@@ -213,7 +209,6 @@ class QuoteCard extends StatelessWidget {
   }
 }
 
-// 🔹 Add Quote Page
 class AddQuotePage extends StatefulWidget {
   const AddQuotePage({super.key});
 
@@ -269,7 +264,6 @@ class _AddQuotePageState extends State<AddQuotePage> {
   }
 }
 
-// 🔹 Favourite Quotes Page
 class FavouriteQuotesPage extends StatelessWidget {
   final List<Map<String, dynamic>> favourites;
 
@@ -295,7 +289,7 @@ class FavouriteQuotesPage extends StatelessWidget {
             author: q["author"],
             iconColor: q["iconColor"],
             isFavourite: true,
-            onFavouriteToggle: () {}, // read-only here
+            onFavouriteToggle: () {}, 
           );
         },
       ),
