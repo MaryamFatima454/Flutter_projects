@@ -1,10 +1,10 @@
 class Post {
-  // Basic info
+ 
   final String name;
   final String time;
   final String text;
 
-  // Details
+ 
   String title;
   String body;
   String category;
@@ -12,14 +12,14 @@ class Post {
   String source;
   String timeAgo;
 
-  // Stats
+  
   int views;
   int likes;
   int shares;
   List<String> comments;
   List<String> tags;
-  final String? thumbnail; // post image
-  final String? profileImage; // user profile image
+  final String? thumbnail; 
+  final String? profileImage; 
 
   Post({
     // From second model
