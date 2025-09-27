@@ -22,7 +22,6 @@ class _ProfilePageState extends State<ProfilePage> {
 
   final ImagePicker _picker = ImagePicker();
 
-  // Pick profile image
   Future<void> _pickProfileImage() async {
     final XFile? image =
     await _picker.pickImage(source: ImageSource.gallery);
@@ -33,7 +32,6 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  // Show options when profile image tapped
   void _onProfileImageTap() {
     showModalBottomSheet(
       context: context,
@@ -168,7 +166,7 @@ class _ProfilePageState extends State<ProfilePage> {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                // Profile Image with options
+               
                 GestureDetector(
                   onTap: _onProfileImageTap,
                   child: Stack(
@@ -273,7 +271,6 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 }
 
-// ---------------- Full Image View ----------------
 class FullImageView extends StatelessWidget {
   final File imageFile;
 
@@ -296,7 +293,6 @@ class FullImageView extends StatelessWidget {
   }
 }
 
-// ----------------- Stat Item -----------------
 class _StatItem extends StatelessWidget {
   final String count;
   final String label;
@@ -329,7 +325,6 @@ class _StatItem extends StatelessWidget {
   }
 }
 
-// ----------------- Post Card -----------------
 class _PostCard extends StatelessWidget {
   final int index;
   final String name;
@@ -455,7 +450,6 @@ class _PostCard extends StatelessWidget {
   }
 }
 
-// ----------------- Action Item -----------------
 class _ActionItem extends StatelessWidget {
   final IconData icon;
   final String count;
