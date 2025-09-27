@@ -15,7 +15,7 @@ class _AddPostPageState extends State<AddPostPage> {
   final TextEditingController _sourceController = TextEditingController();
   final TextEditingController _thumbnailUrlController =
   TextEditingController();
-  final TextEditingController _textController = TextEditingController(); // 👈 Added for `text`
+  final TextEditingController _textController = TextEditingController(); 
 
   final List<String> _tags = [];
   String _selectedCategory = 'Technology';
@@ -28,7 +28,7 @@ class _AddPostPageState extends State<AddPostPage> {
     'Sports',
   ];
 
-  // 🎨 Tag colors list
+  
   final List<Color> _tagColors = [
     Colors.blue,
     Colors.green,
@@ -58,7 +58,7 @@ class _AddPostPageState extends State<AddPostPage> {
       final newPost = Post(
         name: "User",
         time: DateTime.now().toString(),
-        text: _textController.text, // 👈 FIXED (required field added)
+        text: _textController.text, 
         title: _titleController.text,
         body: _bodyController.text,
         category: _selectedCategory,
@@ -149,7 +149,7 @@ class _AddPostPageState extends State<AddPostPage> {
               ),
               const SizedBox(height: 16),
               TextField(
-                controller: _textController, // 👈 Added field for `text`
+                controller: _textController, 
                 style: TextStyle(color: theme.colorScheme.onBackground),
                 decoration:
                 _inputDecoration(context, "Text", "Enter short text..."),
@@ -201,7 +201,7 @@ class _AddPostPageState extends State<AddPostPage> {
                         final index = entry.key;
                         final tag = entry.value;
                         final color =
-                        _tagColors[index % _tagColors.length]; // 🎨
+                        _tagColors[index % _tagColors.length]; 
                         return Chip(
                           label: Text(tag,
                               style: const TextStyle(color: Colors.white)),
