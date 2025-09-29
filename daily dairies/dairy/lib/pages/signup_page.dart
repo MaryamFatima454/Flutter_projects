@@ -55,7 +55,7 @@ class _SignupPageState extends State<SignupPage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // 🖼 Background Image
+        
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -65,7 +65,6 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
 
-          // 🌈 Gradient Overlay
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -79,7 +78,6 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
 
-          // 📦 Signup Card
           Center(
             child: SingleChildScrollView(
               child: Card(
@@ -96,7 +94,7 @@ class _SignupPageState extends State<SignupPage> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        // 📝 Icon
+                    
                         const Icon(
                           Icons.person_add_alt_1,
                           size: 80,
@@ -104,7 +102,6 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         const SizedBox(height: 16),
 
-                        // ✨ Title
                         const Text(
                           "Create Account",
                           style: TextStyle(
@@ -123,7 +120,6 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         const SizedBox(height: 24),
 
-                        // 📧 Email
                         TextFormField(
                           controller: _emailController,
                           decoration: InputDecoration(
@@ -148,7 +144,6 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         const SizedBox(height: 16),
 
-                        // 🔑 Password
                         TextFormField(
                           controller: _passwordController,
                           obscureText: _isPasswordObscure,
@@ -187,7 +182,6 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         const SizedBox(height: 16),
 
-                        // 🔑 Confirm Password
                         TextFormField(
                           controller: _confirmPasswordController,
                           obscureText: _isConfirmPasswordObscure,
@@ -226,7 +220,6 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         const SizedBox(height: 24),
 
-                        // 🚀 Signup Button
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
@@ -251,7 +244,6 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         const SizedBox(height: 16),
 
-                        // 👇 Already have account?
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

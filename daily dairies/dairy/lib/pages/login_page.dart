@@ -54,17 +54,16 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // 🖼️ Background Image
+          
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("lib/assets/background.jpg"), // 👈 apni image ka path
+                image: AssetImage("lib/assets/background.jpg"), 
                 fit: BoxFit.cover,
               ),
             ),
           ),
 
-          // 🌈 Gradient Overlay for readability
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -78,7 +77,6 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          // 📦 Centered Card
           Center(
             child: SingleChildScrollView(
               child: Card(
@@ -95,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        // 🔒 Icon
+                        
                         const Icon(
                           Icons.lock_outline,
                           size: 80,
@@ -103,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 16),
 
-                        // ✨ Title
+                        
                         const Text(
                           "Welcome Back!",
                           style: TextStyle(
@@ -122,14 +120,14 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 24),
 
-                        // 📧 Email
+                        
                         TextFormField(
                           controller: _emailController,
                           decoration: InputDecoration(
                             labelText: "Email",
-                            prefixIcon: const Icon(Icons.email, color: Color(0xFFACAFD9)), // purple shade
+                            prefixIcon: const Icon(Icons.email, color: Color(0xFFACAFD9)), 
                             filled: true,
-                            fillColor: Colors.white.withOpacity(0.8), // 👈 same as SignUp
+                            fillColor: Colors.white.withOpacity(0.8), 
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
                               borderSide: BorderSide.none,
@@ -139,17 +137,16 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 16),
 
-// 🔑 Password
                         TextFormField(
                           controller: _passwordController,
                           obscureText: _obscurePassword,
                           decoration: InputDecoration(
                             labelText: "Password",
-                            prefixIcon: const Icon(Icons.lock, color: Color(0xFFACAFD9)), // purple shade
+                            prefixIcon: const Icon(Icons.lock, color: Color(0xFFACAFD9)), 
                             suffixIcon: IconButton(
                               icon: Icon(
                                 _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                                color: const Color(0xFFACAFD9), // 👈 same accent
+                                color: const Color(0xFFACAFD9), 
                               ),
                               onPressed: () {
                                 setState(() {
@@ -168,7 +165,6 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 24),
 
-                        // 🚀 Login Button
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
@@ -196,14 +192,13 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 16),
 
-                        // 👇 Signup Link
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text(
                               "Don't have an account? ",
                               style: TextStyle(
-                                color: Color(0xFFACAFD9),  // 👈 apna pasand ka color do
+                                color: Color(0xFFACAFD9),
                                 fontSize: 14,
                               ),
                             ),

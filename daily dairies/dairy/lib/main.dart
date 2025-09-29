@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'theme/theme_notifier.dart';
 import 'pages/login_page.dart';
-import 'firebase_options.dart';  // FlutterFire generate karega
+import 'firebase_options.dart';  
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

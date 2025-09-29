@@ -12,13 +12,13 @@ class PostDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Theme brightness check
+    
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
       backgroundColor: isDark
-          ? Colors.black // Dark mode background
-          : const Color(0xFFE3F2FD), // Light mode soft blue background
+          ? Colors.black 
+          : const Color(0xFFE3F2FD), 
       appBar: AppBar(
         backgroundColor: isDark ? Colors.black : const Color(0xFF90CAF9),
         elevation: 0,
@@ -36,7 +36,7 @@ class PostDetailPage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.share, color: isDark ? Colors.white : Colors.black),
             onPressed: () {
-              // TODO: share logic
+           
             },
           ),
         ],
@@ -47,7 +47,7 @@ class PostDetailPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Stats Row
+             
               Row(
                 children: [
                   Icon(Icons.favorite,
@@ -77,7 +77,6 @@ class PostDetailPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Title
               Text(
                 post.title,
                 style: GoogleFonts.poppins(
@@ -88,7 +87,6 @@ class PostDetailPage extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // Description
               Text(
                 post.body,
                 style: GoogleFonts.poppins(
@@ -99,7 +97,6 @@ class PostDetailPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-              // Tags
               Wrap(
                 spacing: 6,
                 children: post.tags
@@ -114,12 +111,11 @@ class PostDetailPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-              // Delete Button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    // Confirm delete dialog
+                   
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
@@ -145,9 +141,9 @@ class PostDetailPage extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.pop(context); // close dialog
+                              Navigator.pop(context); 
                               Navigator.pop(context,
-                                  true); // return true to parent
+                                  true);
                             },
                             child: const Text("Delete",
                                 style: TextStyle(color: Colors.red)),
